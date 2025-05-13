@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Rota para registrar um log
+
 app.post('/logs', (req, res) => {
     const { nome } = req.body;
 
@@ -18,7 +18,6 @@ app.post('/logs', (req, res) => {
     res.status(201).json({ mensagem: 'Log registrado com sucesso.', id });
 });
 
-// Rota para consultar log por ID
 app.get('/logs/:id', (req, res) => {
     const id = req.params.id;
     const logs = fs.readFileSync('logs.txt', 'utf8').split('\n');
