@@ -10,6 +10,6 @@ function registrarLog(nomeAluno) {
     return id;
 }
 
-// Teste opcional:
+
 const idGerado = registrarLog("João da Silva");
 console.log("ID gerado:", idGerado);
